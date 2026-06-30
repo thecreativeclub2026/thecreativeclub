@@ -431,7 +431,8 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
   .booking-wrap{padding:1.25rem 1rem!important}
   [style*="grid-template-columns:repeat(5,1fr)"]{grid-template-columns:1fr!important}
 }
-</style>
+@keyframes slideBeadsHome{0%{transform:translateX(60%)}100%{transform:translateX(-60%)}}
+@keyframes slideBeadsEv{0%{transform:translateX(60%)}100%{transform:translateX(-60%)}}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 </head>
@@ -946,20 +947,6 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
   })();
   </script>
 
-  <!-- COME FUNZIONA -->
-  <section class="grid-bg" style="background-color:var(--cream);padding:6rem 0;">
-    <div style="max-width:1200px;margin:0 auto;padding:0 3rem">
-      <span class="sec-label" style="text-align:center;display:block">Come funziona</span>
-      <h2 class="sec-title" style="text-align:center">Semplice come un <em>pomeriggio tra amici</em></h2>
-      <div class="steps-row">
-        <div class="step-cell reveal"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🎟️</div><div class="step-num">01</div><div class="step-title">Prenota</div><div class="step-desc">Scegli il posto in pochi click. Solo 10 posti disponibili.</div></div>
-        <div class="step-cell reveal reveal-delay-1"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🧺</div><div class="step-num">02</div><div class="step-title">Vieni</div><div class="step-desc">Arrivi, ti accogliamo, conosci gli altri tra un aperitivo.</div></div>
-        <div class="step-cell reveal reveal-delay-2"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🪡</div><div class="step-num">03</div><div class="step-title">Crea insieme</div><div class="step-desc">Collane, bracciali, charms. Materiali inclusi. Zero regole.</div></div>
-        <div class="step-cell reveal reveal-delay-3"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🌸</div><div class="step-num">04</div><div class="step-title">Nuovi ricordi</div><div class="step-desc">Torni a casa con una collana e, forse, qualche amica nuova.</div></div>
-      </div>
-    </div>
-  </section>
-
   <!-- PROSSIMO EVENTO CARD -->
   <section style="background:var(--sage-bg);padding:6rem 0;">
     <div style="max-width:1200px;margin:0 auto;padding:0 3rem">
@@ -976,8 +963,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
             <span class="etag" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85)">💰 €20</span>
           </div>
           <button class="btn-white" onclick="showPage('event');setTimeout(function(){document.getElementById('ev-booking').scrollIntoView({behavior:'smooth'})},300)">Prenota ora →</button>
-          <div class="spots-pill" style="display:block;margin-top:1rem;background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.8)">Solo 6 posti rimasti su 10 ⚡</div>
-        </div>
+          </div>
         <div class="evento-right">
           <span class="sec-label">Dettagli</span>
           <div class="info-row"><span class="info-label">Data</span><span class="info-val">Sabato 19 Luglio 2026</span></div>
@@ -997,6 +983,74 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
             <div style="text-align:center"><span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--choco);display:block" id="h2-min">--</span><span style="font-size:0.6rem;color:var(--choco2);font-weight:700;letter-spacing:0.1em;text-transform:uppercase">min</span></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSA CREERAI -->
+  <section style="background:var(--sage3);padding:5rem 0;overflow:hidden;">
+    <div style="max-width:1000px;margin:0 auto;padding:0 3rem;text-align:center;">
+      <span class="sec-label" style="color:rgba(255,255,255,0.6);">L'attività</span>
+      <!-- Sticker collana perline scorrevole -->
+      <div style="display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;overflow:hidden;">
+        <div style="display:flex;align-items:center;gap:3px;flex-wrap:nowrap;animation:slideBeadsHome 12s linear infinite;white-space:nowrap;">
+          <span style="font-size:1.1rem;">🟢</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">⚪</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🔵</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🟡</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🔴</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🟣</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🟠</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🟢</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">⚪</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🔵</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🟡</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.6);">•</span><span style="font-size:1.1rem;">🔴</span>
+        </div>
+      </div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;font-style:italic;color:white;margin-bottom:1rem;">Crea la tua <em style="color:#B8CFBA;">collana, il tuo bracciale</em> — o quello che vuoi</h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.75;max-width:640px;margin:0 auto 3rem;font-family:'Inter',sans-serif;">Al Creative Beads Picnic avrai a disposizione <strong style="color:white;">perline, charms, fili e materiali creativi</strong> per creare gioielli e accessori unici. Nessuna esperienza richiesta — solo voglia di creare.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:2rem;">
+        <div style="position:relative;border-radius:1.25rem;overflow:hidden;min-height:230px;border:1px solid rgba(255,255,255,0.15);">
+          <img src="perline1.jpg" alt="Collane" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,107,66,0.35) 0%,rgba(61,107,66,0.88) 70%);"></div>
+          <div style="position:relative;padding:1.75rem 1rem;height:100%;display:flex;flex-direction:column;justify-content:flex-end;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">📿</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Collane</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;line-height:1.5;">Girocolli, lunghe, a layering — il tuo stile</div>
+          </div>
+        </div>
+        <div style="position:relative;border-radius:1.25rem;overflow:hidden;min-height:230px;border:1px solid rgba(255,255,255,0.15);">
+          <img src="perline4.jpg" alt="Bracciali" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,107,66,0.35) 0%,rgba(61,107,66,0.88) 70%);"></div>
+          <div style="position:relative;padding:1.75rem 1rem;height:100%;display:flex;flex-direction:column;justify-content:flex-end;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">💚</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Bracciali</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;line-height:1.5;">Stack, singoli, con charms — da abbinare</div>
+          </div>
+        </div>
+        <div style="position:relative;border-radius:1.25rem;overflow:hidden;min-height:230px;border:1px solid rgba(255,255,255,0.15);">
+          <img src="perline2.jpg" alt="Charms & ciondoli" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,107,66,0.35) 0%,rgba(61,107,66,0.88) 70%);"></div>
+          <div style="position:relative;padding:1.75rem 1rem;height:100%;display:flex;flex-direction:column;justify-content:flex-end;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">✨</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Charms & ciondoli</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;line-height:1.5;">Personalizza con simboli che ami</div>
+          </div>
+        </div>
+        <div style="position:relative;border-radius:1.25rem;overflow:hidden;min-height:230px;border:1px solid rgba(255,255,255,0.15);">
+          <img src="perline3.jpg" alt="È tutto tuo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,107,66,0.35) 0%,rgba(61,107,66,0.88) 70%);"></div>
+          <div style="position:relative;padding:1.75rem 1rem;height:100%;display:flex;flex-direction:column;justify-content:flex-end;">
+            <div style="font-size:2rem;margin-bottom:0.5rem;">🎁</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">È tutto tuo</div>
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.85);font-family:'Inter',sans-serif;line-height:1.5;">Quello che crei al picnic lo porti a casa</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);font-family:'Inter',sans-serif;font-style:italic;">Perline in vetro, cristalli, pietra naturale, charms dorati, fili colorati e molto altro ti aspettano.</p>
+    </div>
+  </section>
+
+    <!-- COME FUNZIONA -->
+  <section class="grid-bg" style="background-color:var(--cream);padding:6rem 0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 3rem">
+      <span class="sec-label" style="text-align:center;display:block">Come funziona</span>
+      <h2 class="sec-title" style="text-align:center">Semplice come un <em>pomeriggio tra amici</em></h2>
+      <div class="steps-row">
+        <div class="step-cell reveal"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🎟️</div><div class="step-num">01</div><div class="step-title">Prenota</div><div class="step-desc">Scegli il posto in pochi click. Solo 10 posti disponibili.</div></div>
+        <div class="step-cell reveal reveal-delay-1"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🧺</div><div class="step-num">02</div><div class="step-title">Vieni</div><div class="step-desc">Arrivi, ti accogliamo, conosci gli altri tra un aperitivo.</div></div>
+        <div class="step-cell reveal reveal-delay-2"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🪡</div><div class="step-num">03</div><div class="step-title">Crea insieme</div><div class="step-desc">Collane, bracciali, charms. Materiali inclusi. Zero regole.</div></div>
+        <div class="step-cell reveal reveal-delay-3"><div style="font-size:2.2rem;margin-bottom:0.5rem;">🌸</div><div class="step-num">04</div><div class="step-title">Nuovi ricordi</div><div class="step-desc">Torni a casa con una collana e, anche qualche amica nuova.</div></div>
       </div>
     </div>
   </section>
@@ -1082,6 +1136,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
     <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--choco);opacity:0.6;margin-bottom:0.5rem">Non perdere la prossima tappa</p>
     <h2 class="nl-title">Resta nel loop.</h2>
     <p style="color:var(--choco2);font-size:0.9rem;margin-top:0.5rem">Iscriviti e sarai la prima a sapere dove arriviamo.</p>
+    <div style="height:1.5rem"></div>
     <form class="nl-form" onsubmit="handleNL(event)">
       <input type="email" placeholder="La tua email..." required>
       <button type="submit">Iscriviti</button>
@@ -1107,7 +1162,11 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
   </div>
   <footer>
     <div class="footer-inner">
-      <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div></div>
+      <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div><div style="margin-top:0.75rem;font-size:0.7rem;color:rgba(255,255,255,0.45);line-height:1.6;font-family:'Inter',sans-serif;">
+          <strong style="color:rgba(255,255,255,0.65);">Alcagency S.r.l.s.</strong><br>
+          Via Abelardo Pecorini 7/A — 20138 Milano<br>
+          P.IVA 14307670969
+        </div></div>
       <ul class="footer-links">
         <li><a onclick="showPage('home')">Home</a></li>
         <li><a onclick="showPage('about')">Chi siamo</a></li>
@@ -1124,14 +1183,28 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
   <!-- HERO -->
   <div class="about-hero grid-bg-sage">
     <style>.ahem{position:absolute;pointer-events:none;user-select:none;line-height:1;z-index:2;opacity:0.6;}</style>
-    <span class="ahem" style="font-size:2rem;top:8%;left:3%;animation:ahfA 4.5s ease-in-out infinite;">🌸</span>
-    <span class="ahem" style="font-size:1.6rem;top:22%;left:6%;animation:ahfC 5.2s ease-in-out infinite 0.8s;">🪡</span>
-    <span class="ahem" style="font-size:1.8rem;top:55%;left:2%;animation:ahfB 4.0s ease-in-out infinite 1.4s;">🍓</span>
-    <span class="ahem" style="font-size:1.5rem;top:75%;left:7%;animation:ahfA 5.6s ease-in-out infinite 0.3s;">🌿</span>
-    <span class="ahem" style="font-size:2rem;top:8%;right:3%;animation:ahfB 4.8s ease-in-out infinite 0.6s;">🎀</span>
-    <span class="ahem" style="font-size:1.6rem;top:22%;right:6%;animation:ahfA 5.0s ease-in-out infinite 1.2s;">🧺</span>
-    <span class="ahem" style="font-size:1.8rem;top:55%;right:2%;animation:ahfC 4.3s ease-in-out infinite 0.4s;">🌼</span>
-    <span class="ahem" style="font-size:1.5rem;top:75%;right:7%;animation:ahfB 5.4s ease-in-out infinite 1.8s;">💚</span>
+        <span class="ahem" style="font-size:1.9rem;top:4.1%;left:1.9%;animation:ahfA 3.6s ease-in-out infinite 2.6s;">🌸</span>
+    <span class="ahem" style="font-size:1.3rem;top:3.3%;left:14.7%;animation:ahfB 5.7s ease-in-out infinite 2.7s;">🌿</span>
+    <span class="ahem" style="font-size:1.8rem;top:3.1%;left:26.8%;animation:ahfC 4.8s ease-in-out infinite 0.9s;">💚</span>
+    <span class="ahem" style="font-size:1.3rem;top:5.4%;left:46.2%;animation:ahfA 4.1s ease-in-out infinite 2.2s;">🎨</span>
+    <span class="ahem" style="font-size:2.1rem;top:4.4%;left:60.6%;animation:ahfB 5.2s ease-in-out infinite 3.2s;">✨</span>
+    <span class="ahem" style="font-size:1.8rem;top:3.4%;left:79.4%;animation:ahfC 3.7s ease-in-out infinite 1.3s;">🧵</span>
+    <span class="ahem" style="font-size:1.6rem;top:5.1%;left:92.9%;animation:ahfA 5.3s ease-in-out infinite 3.2s;">📿</span>
+    <span class="ahem" style="font-size:1.8rem;top:18.5%;left:3.4%;animation:ahfB 5.6s ease-in-out infinite 2.2s;">🪡</span>
+    <span class="ahem" style="font-size:1.4rem;top:16.9%;left:87.2%;animation:ahfC 3.6s ease-in-out infinite 2.8s;">🎀</span>
+    <span class="ahem" style="font-size:1.6rem;top:17.1%;left:94.5%;animation:ahfA 3.8s ease-in-out infinite 0.9s;">🌺</span>
+    <span class="ahem" style="font-size:1.8rem;top:29.1%;left:2.7%;animation:ahfB 4.0s ease-in-out infinite 1.5s;">🍓</span>
+    <span class="ahem" style="font-size:1.6rem;top:30.9%;left:6.7%;animation:ahfC 3.9s ease-in-out infinite 2.4s;">🦋</span>
+    <span class="ahem" style="font-size:2.0rem;top:30.2%;left:85.7%;animation:ahfA 5.1s ease-in-out infinite 4.0s;">🌼</span>
+    <span class="ahem" style="font-size:1.5rem;top:28.1%;left:91.3%;animation:ahfB 4.1s ease-in-out infinite 3.1s;">🫧</span>
+    <span class="ahem" style="font-size:1.8rem;top:43.5%;left:1.3%;animation:ahfC 5.9s ease-in-out infinite 0.8s;">💐</span>
+    <span class="ahem" style="font-size:1.5rem;top:41.8%;left:87.1%;animation:ahfA 5.8s ease-in-out infinite 1.6s;">🌱</span>
+    <span class="ahem" style="font-size:1.6rem;top:55.3%;left:2.6%;animation:ahfB 4.2s ease-in-out infinite 2.2s;">🍒</span>
+    <span class="ahem" style="font-size:1.3rem;top:55.0%;left:89.4%;animation:ahfC 6.0s ease-in-out infinite 0.9s;">🥂</span>
+    <span class="ahem" style="font-size:1.4rem;top:68.2%;left:2.7%;animation:ahfA 5.1s ease-in-out infinite 0.4s;">🧁</span>
+    <span class="ahem" style="font-size:2.0rem;top:67.1%;left:86.9%;animation:ahfB 6.0s ease-in-out infinite 1.5s;">🪷</span>
+    <span class="ahem" style="font-size:1.5rem;top:78.7%;left:2.1%;animation:ahfC 5.3s ease-in-out infinite 0.0s;">🌻</span>
+    <span class="ahem" style="font-size:2.1rem;top:77.7%;left:87.8%;animation:ahfA 3.8s ease-in-out infinite 2.6s;">💫</span>
     <div style="max-width:900px;margin:0 auto;padding:6rem 3rem;text-align:center;position:relative;z-index:5;width:100%;">
       <span class="sec-label" style="text-align:center;display:block;">Chi siamo</span>
       <h1 class="about-big" style="text-align:center;">Non un corso.<br>Non un workshop.<br><em>Uno spazio.</em></h1>
@@ -1167,7 +1240,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
         <!-- Mery -->
         <div style="background:white;border:2px solid var(--border-sage);border-radius:2rem;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(122,158,126,0.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
           <div style="height:300px;overflow:hidden;background:var(--sage-bg);display:flex;align-items:center;justify-content:center;">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Mery" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.parentElement.innerHTML='<div style=\'display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0.75rem\'><span style=\'font-size:4rem\'>🌸</span><span style=\'font-size:0.82rem;color:#5C8060;font-style:italic\'>Foto di Mery</span></div>'"/>
+            <img src="mery.jpg" alt="Mery" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.parentElement.innerHTML='<div style=\'display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0.75rem\'><span style=\'font-size:4rem\'>🌸</span><span style=\'font-size:0.82rem;color:#5C8060;font-style:italic\'>Foto di Mery</span></div>'"/>
           </div>
           <div style="padding:1.75rem;">
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
@@ -1185,7 +1258,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
         <!-- Benzi -->
         <div style="background:white;border:2px solid var(--border-sage);border-radius:2rem;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 48px rgba(122,158,126,0.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
           <div style="height:300px;overflow:hidden;background:#F0D8D5;display:flex;align-items:center;justify-content:center;">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80" alt="Benzi" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.parentElement.innerHTML='<div style=\'display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0.75rem\'><span style=\'font-size:4rem\'>🎀</span><span style=\'font-size:0.82rem;color:#D4847E;font-style:italic\'>Foto di Benzi</span></div>'"/>
+            <img src="benzi.jpg" alt="Benzi" style="width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.parentElement.innerHTML='<div style=\'display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:0.75rem\'><span style=\'font-size:4rem\'>🎀</span><span style=\'font-size:0.82rem;color:#D4847E;font-style:italic\'>Foto di Benzi</span></div>'"/>
           </div>
           <div style="padding:1.75rem;">
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
@@ -1220,7 +1293,11 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
   </div>
   <footer>
     <div class="footer-inner">
-      <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div></div>
+      <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div><div style="margin-top:0.75rem;font-size:0.7rem;color:rgba(255,255,255,0.45);line-height:1.6;font-family:'Inter',sans-serif;">
+          <strong style="color:rgba(255,255,255,0.65);">Alcagency S.r.l.s.</strong><br>
+          Via Abelardo Pecorini 7/A — 20138 Milano<br>
+          P.IVA 14307670969
+        </div></div>
       <ul class="footer-links">
         <li><a onclick="showPage('home')">Home</a></li>
         <li><a onclick="showPage('about')">Chi siamo</a></li>
@@ -1250,7 +1327,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
         </div>
         <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
           <button class="btn-white" onclick="document.getElementById('ev-booking').scrollIntoView({behavior:'smooth'})">Prenota il tuo posto</button>
-          <span style="font-size:0.85rem;color:rgba(255,255,255,0.6)">Solo 6 posti rimasti ⚡</span>
+          
         </div>
       </div>
       <div>
@@ -1366,14 +1443,7 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
           </div>
           <div>
             <span class="sec-label" style="color:rgba(255,255,255,0.7)">Info pratiche</span>
-            <h2 class="sec-title" style="font-size:2rem;color:white"><em style="color:#B8CFBA">Verde Salvia</em></h2>
-            <p style="font-size:0.9rem;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:2rem;">Ogni evento ha un colore tema. Il primo è il Verde Salvia: calmante, naturale, elegante.</p>
-            <div style="display:flex;gap:0.5rem;margin-bottom:2rem">
-              <div style="flex:1;height:60px;border-radius:0.75rem;background:#7A9E7E;display:flex;align-items:flex-end;padding:0.5rem;font-size:0.65rem;color:white;font-weight:700">Sage</div>
-              <div style="flex:1;height:60px;border-radius:0.75rem;background:#FDF8F0;display:flex;align-items:flex-end;padding:0.5rem;font-size:0.65rem;color:#9C8A7A;font-weight:700">Cream</div>
-              <div style="flex:1;height:60px;border-radius:0.75rem;background:#E8A5A0;display:flex;align-items:flex-end;padding:0.5rem;font-size:0.65rem;color:white;font-weight:700">Pink</div>
-              <div style="flex:1;height:60px;border-radius:0.75rem;background:#C47050;display:flex;align-items:flex-end;padding:0.5rem;font-size:0.65rem;color:white;font-weight:700">Terra</div>
-            </div>
+            <h2 class="sec-title" style="font-size:2rem;color:white">Tutto quello che ti serve <em style="color:#B8CFBA">sapere</em></h2>
             <div style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:1.25rem;padding:1.5rem">
               <div style="display:flex;flex-direction:column;gap:0.5rem">
                 <div style="display:flex;gap:0.75rem;font-size:0.87rem"><span style="color:#B8CFBA;font-weight:700;min-width:70px">📍 Dove</span><span style="color:rgba(255,255,255,0.8)">Piacenza — su conferma dopo prenotazione</span></div>
@@ -1387,7 +1457,49 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
       </div>
     </section>
 
-    <!-- BOOKING -->
+      <!-- DETTAGLI PERLINE -->
+  <section style="padding:5rem 0;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 3rem;">
+      <span class="sec-label" style="color:rgba(255,255,255,0.7);text-align:center;display:block">L'attività creativa</span>
+      <!-- Sticker collana scorrevole -->
+      <div style="display:flex;align-items:center;justify-content:center;margin-bottom:0.75rem;overflow:hidden;">
+        <div style="display:flex;align-items:center;gap:3px;flex-wrap:nowrap;animation:slideBeadsEv 12s linear infinite;white-space:nowrap;">
+          <span style="font-size:1.1rem;">🟢</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">⚪</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🔵</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🟡</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🔴</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🟣</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🟠</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🟢</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">⚪</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🔵</span><span style="font-size:0.7rem;color:rgba(255,255,255,0.5);">•</span><span style="font-size:1.1rem;">🟡</span>
+        </div>
+      </div>
+      <h2 class="sec-title" style="text-align:center;color:white">Perline, charms e <em style="color:#B8CFBA">tutto quello che ami</em></h2>
+      <p style="text-align:center;font-size:0.92rem;color:rgba(255,255,255,0.78);line-height:1.75;max-width:600px;margin:0 auto 3rem;font-family:'Inter',sans-serif;">Avrai a disposizione una selezione curata di materiali per creare gioielli unici da portare a casa. Nessuna esperienza richiesta — ti guidiamo noi.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:1.25rem;overflow:hidden;border:1px solid rgba(255,255,255,0.18);">
+          <div style="aspect-ratio:4/3;overflow:hidden;"><img src="perline1.jpg" alt="Materiali creativi" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:1.25rem;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">📿</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Collane</h3>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.5;font-family:'Inter',sans-serif;">Girocolli, layering, pendenti — perline in vetro, cristalli, pietra naturale.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:1.25rem;overflow:hidden;border:1px solid rgba(255,255,255,0.18);">
+          <div style="aspect-ratio:4/3;overflow:hidden;"><img src="perline4.jpg" alt="Bracciali" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:1.25rem;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">💚</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Bracciali</h3>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.5;font-family:'Inter',sans-serif;">Stack e singoli con fili colorati, charms dorati e perline di ogni forma.</p>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:1.25rem;overflow:hidden;border:1px solid rgba(255,255,255,0.18);">
+          <div style="aspect-ratio:4/3;overflow:hidden;"><img src="perline2.jpg" alt="Charms" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div style="padding:1.25rem;text-align:center;">
+            <div style="font-size:1.8rem;margin-bottom:0.5rem;">✨</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:white;margin-bottom:0.4rem;">Charms & altro</h3>
+            <p style="font-size:0.78rem;color:rgba(255,255,255,0.7);line-height:1.5;font-family:'Inter',sans-serif;">Ciondoli, anelli, orecchini — se hai un'idea, i materiali ci sono.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
     <section id="ev-booking" style="padding:6rem 0;">
       <div style="max-width:1200px;margin:0 auto;padding:0 3rem;text-align:center">
         <span class="sec-label" style="color:rgba(255,255,255,0.7);text-align:center;display:block">Prenota</span>
@@ -1412,6 +1524,10 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
             </div>
             <div class="form-group"><label>Note (opzionale)</label><textarea placeholder="Allergie, domande, curiosità..."></textarea></div>
             <div class="price-box"><div><p class="price-lbl">Quota partecipazione</p><p style="font-size:0.75rem;color:var(--choco2)">Aperitivo + materiali inclusi</p></div><div style="text-align:right"><p class="price-amt">€20</p><p style="font-size:0.72rem;color:var(--choco2)">a persona</p></div></div>
+            <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;margin-bottom:1.25rem;">
+              <input type="checkbox" id="consensoPrivacy" name="consensoPrivacy" required style="margin-top:3px;accent-color:var(--sage2);width:16px;height:16px;flex-shrink:0;">
+              <span style="font-size:0.78rem;color:var(--choco2);line-height:1.5;font-family:'Inter',sans-serif;">Acconsento al trattamento dei miei dati personali ai fini dell'organizzazione dell'evento e allo scatto di fotografie/video durante il picnic, anche a scopo promozionale sui canali social di The Creative Club *</span>
+            </label>
             <button type="submit" class="form-submit">Prenota e paga →</button>
           </form>
         </div>
@@ -1445,8 +1561,8 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
         <button onclick="document.getElementById('bonifico-modal').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;">×</button>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;font-style:italic;color:var(--choco);margin-bottom:1.25rem;">Istruzioni Bonifico</h3>
         <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.88rem;color:var(--choco2);">
-          <div style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-sage);"><span style="font-weight:700;color:var(--choco);">Intestatario</span><span>The Creative Club</span></div>
-          <div style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-sage);"><span style="font-weight:700;color:var(--choco);">IBAN</span><span style="font-family:monospace;font-size:0.82rem;">IT60 X054 2811 1010 0000 0123 456</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-sage);"><span style="font-weight:700;color:var(--choco);">Intestatario</span><span>Benedetta Fusi</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-sage);"><span style="font-weight:700;color:var(--choco);">IBAN</span><span style="font-family:monospace;font-size:0.82rem;">IT18 R060 8533 2700 0003 5000 256</span></div>
           <div style="display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-sage);"><span style="font-weight:700;color:var(--choco);">Causale</span><span>Picnic 19/07 + tuo nome</span></div>
           <div style="display:flex;justify-content:space-between;padding:0.6rem 0;"><span style="font-weight:700;color:var(--choco);">Importo</span><span style="font-weight:700;color:var(--sage2);">€20,00</span></div>
         </div>
@@ -1487,6 +1603,32 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
       </div>
     </section>
 
+  <!-- OUTFIT INSPO -->
+  <section style="padding:4rem 0;">
+    <div style="max-width:1100px;margin:0 auto;padding:0 3rem;">
+      <span class="sec-label" style="color:rgba(255,255,255,0.7);text-align:center;display:block">Come vestirsi</span>
+      <h2 class="sec-title" style="text-align:center;color:white">Outfit <em style="color:#B8CFBA">inspo</em> per il picnic</h2>
+      <p style="text-align:center;font-size:0.88rem;color:rgba(255,255,255,0.75);max-width:560px;margin:0 auto 2.5rem;font-family:'Inter',sans-serif;">Vesti comoda e in tema — toni naturali, verde salvia, crema, rosa cipria. Niente di formale, tutto di autentico.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+        <div style="border-radius:1rem;overflow:hidden;aspect-ratio:3/4;position:relative;">
+          <img src="outfit1.jpg" alt="Outfit picnic country chic" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="border-radius:1rem;overflow:hidden;aspect-ratio:3/4;position:relative;">
+          <img src="outfit2.jpg" alt="Outfit relax tra il verde" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="border-radius:1rem;overflow:hidden;aspect-ratio:3/4;position:relative;">
+          <img src="outfit3.jpg" alt="Outfit picnic tra amiche" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div style="border-radius:1rem;overflow:hidden;aspect-ratio:3/4;position:relative;">
+          <img src="outfit4.jpg" alt="Outfit floreale boho" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  
+
     <!-- CTA FINALE -->
     <section style="background:var(--choco);min-height:60vh;padding:0;text-align:center;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(255,255,255,0.03) 31px,rgba(255,255,255,0.03) 32px),repeating-linear-gradient(90deg,transparent,transparent 31px,rgba(255,255,255,0.03) 31px,rgba(255,255,255,0.03) 32px);background-size:32px 32px;"></div>
@@ -1514,7 +1656,11 @@ footer{background:var(--choco);border-top:1px solid rgba(255,255,255,0.08);paddi
     </div>
     <footer>
       <div class="footer-inner">
-        <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div></div>
+        <div><div class="footer-logo">The Creative Club</div><div class="footer-tagline">RIDI · MANGIA · CREA</div><div style="margin-top:0.75rem;font-size:0.7rem;color:rgba(255,255,255,0.45);line-height:1.6;font-family:'Inter',sans-serif;">
+            <strong style="color:rgba(255,255,255,0.65);">Alcagency S.r.l.s.</strong><br>
+            Via Abelardo Pecorini 7/A — 20138 Milano<br>
+            P.IVA 14307670969
+          </div></div>
         <ul class="footer-links">
           <li><a onclick="showPage('home')">Home</a></li>
           <li><a onclick="showPage('about')">Chi siamo</a></li>
