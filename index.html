@@ -1851,6 +1851,38 @@ function handleBooking(e){
   if(ov) ov.style.display='flex';
 }
 
+function inviaAFormspree(metodo){
+  if(!pendingFormData) return;
+  var d = pendingFormData;
+  var data = {
+    nome: d.nome,
+    cognome: d.cognome,
+    email: d.email,
+    telefono: d.telefono || 'non fornito',
+    canale: d.canale || 'non specificato',
+    note: d.note || 'nessuna',
+    metodo_pagamento: metodo,
+    quota: '20 euro',
+    data_prenotazione: new Date().toLocaleString('it-IT'),
+    _subject: 'Nuova prenotazione - ' + d.nome + ' ' + d.cognome,
+    _replyto: d.email
+  };
+  fetch('https://formspree.io/f/mnjkggdk', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(res){
+    if(res.ok){
+      console.log('Formspree: prenotazione inviata');
+    } else {
+      console.error('Formspree error:', res);
+    }
+  })
+  .catch(function(err){ console.error('Fetch error:', err); });
+}
+
 function closeStripe(){
   var ov=document.getElementById('stripe-overlay');
   if(ov) ov.style.display='none';
@@ -1859,6 +1891,7 @@ function closeStripe(){
 function payWithPaypal(){
   window.open('https://www.paypal.me/thecreativeclub/20EUR','_blank');
   closeStripe();
+  inviaAFormspree('PayPal');
   inviaEmailConferma('PayPal');
 }
 
@@ -1866,6 +1899,7 @@ function payWithBonifico(){
   closeStripe();
   var m=document.getElementById('bonifico-modal');
   if(m) m.style.display='flex';
+  inviaAFormspree('Bonifico bancario');
   inviaEmailConferma('Bonifico bancario');
 }
 
